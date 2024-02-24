@@ -12,7 +12,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -24,21 +23,17 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun login_screen(navController: NavHostController) {
-    var name: String by remember { mutableStateOf("") }
+    var name by remember { mutableStateOf("") }
     var id_iest: Int by remember { mutableStateOf(0) }
 
     Column (
@@ -55,7 +50,7 @@ fun login_screen(navController: NavHostController) {
         Spacer(modifier = Modifier.height(10.dp))
 
         OutlinedTextField(
-            value = name.toString(),
+            value = name,
             onValueChange = {name = it},
             label = {
                 Text(text = "Ingresa tu nombre")

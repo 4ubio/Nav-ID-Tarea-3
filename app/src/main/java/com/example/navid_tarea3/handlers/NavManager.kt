@@ -1,7 +1,6 @@
 package com.example.navid_tarea3.handlers
 
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -13,7 +12,7 @@ import com.example.navid_tarea3.views.message_screen
 
 @Composable
 fun NavManager() {
-    var navController: NavHostController = rememberNavController()
+    val navController: NavHostController = rememberNavController()
     NavHost(navController = navController, startDestination = "LoginScreen") {
         //Definiendo Rutas
         composable(route = "LoginScreen") {
