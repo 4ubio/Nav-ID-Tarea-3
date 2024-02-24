@@ -33,7 +33,7 @@ import androidx.compose.ui.graphics.Color
 
 @Composable
 fun login_screen(navController: NavHostController) {
-    var name by remember { mutableStateOf("") }
+    var name: String by remember { mutableStateOf("") }
     var id_iest: Int by remember { mutableStateOf(0) }
 
     Column (
@@ -61,7 +61,6 @@ fun login_screen(navController: NavHostController) {
             leadingIcon = {
                 Icon(imageVector = Icons.Default.Star, contentDescription = "Icon")
             },
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 30.dp)

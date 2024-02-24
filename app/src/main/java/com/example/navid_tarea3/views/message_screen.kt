@@ -26,7 +26,7 @@ fun getMessage(name: String, id_iest: Int): String {
     val id_isnd = listOf(19475, 19508, 19523, 19666, 21637, 21767, 22098, 22154, 22180, 22208, 22210)
 
     if (id_iest <= 10) {
-        return "Bienvenido al Laboratorio de ISND estimado Coordinador $name."
+        return "Bienvenido al laboratorio de ISND, estimado coordinador $name."
     } else if (id_iest <= 100) {
         return "Permiso autorizado para el profesor $name."
     } else if (id_iest <= 15000) {
@@ -73,5 +73,5 @@ fun message_screen(navController: NavHostController, name: String, id_iest: Int)
 @Preview(showBackground = true)
 @Composable
 fun Preview_Message() {
-    message_screen(navController = rememberNavController(), name="Sebastián Rubio Quiroz", id_iest = 19666)
+    message_screen(navController = rememberNavController(), name = "Sebastián Rubio Quiroz", id_iest = 19666)
 }
